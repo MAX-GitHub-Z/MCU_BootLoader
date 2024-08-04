@@ -16,7 +16,7 @@ Function gitPush {
 
     Set-Location $ScriptDir # 切换到项目路径
     $now = Get-Date # 获取时间日期对象
-	$age = Read-Host -Prompt "输入提交信息"
+	$age = Read-Host -Prompt "Enter the submission prompt"#输入提交信息
     $msg = "==>当前时间 " + $now.ToString('yyyy-MM-dd HH:mm:ss') + " commit $age <=="# 提交的消息
     # 将提交信息输出到日志文件gitpush.log
     $msg | Out-File -FilePath .\gitpush.log -Append -Encoding utf8
