@@ -1,5 +1,5 @@
-.\objects\bsp_led.o: ..\User\LED\bsp_led.c
-.\objects\bsp_led.o: ..\User\LED\bsp_led.h
+.\objects\bsp_led.o: ..\User\bsp\bsp_led.c
+.\objects\bsp_led.o: ..\User\bsp\bsp_led.h
 .\objects\bsp_led.o: ..\Libranies\CMSIS\stm32f10x.h
 .\objects\bsp_led.o: ..\Libranies\CMSIS\core_cm3.h
 .\objects\bsp_led.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
