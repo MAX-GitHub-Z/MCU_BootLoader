@@ -30,15 +30,13 @@ Size大小，需要根据芯片的大小具体进行修改与填写，如STM32F1
 
 size = 0x0800 FFFF - 0x0800 4000 +1 =0x0000 c000
 
-
-
-![](doc/figures/boot%E7%A8%8B%E5%BA%8FAPP%E5%BC%95%E5%AF%BC%E7%BC%96%E8%AF%91.jpg)
+![](doc/figures/boot_program_APP_boot_compilation.jpg)
 
 2、修改中断向量偏向量
 
 STM32F103的向量表 的宏定义为： VECT_TAB_OFFSET 在 system_stm32f10x.c 中定义 如图：
 
-![](doc/figures/APP%E4%BF%AE%E6%94%B9%E4%B8%AD%E6%96%AD%E5%81%8F%E7%A7%BB%E9%87%8F.jpg)
+![](doc/figures/APP_modifies_interrupt_offset.jpg)
 
 修改的大小=APP程序的起始地址-BOOT程序的起始地址
 
