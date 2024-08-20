@@ -1,6 +1,7 @@
 #include "stm32f10x.h"
 #include "bsp_led.h"
 #include "config.h"
+#include "bsp_systick.h"
 /* BOOT程序地址 			0x0800 0000 - 0x0800 3BFF
 ** BOOT程序变量地址	0x0800 3C00 - 0x0800 3FFF
 **/
@@ -24,12 +25,12 @@ void jump_to_app(void)
 
 int main(void)
 {
-	
+	Systick_init();
 	LED_GPIO_Config();
 	jump_to_app();
+	LED_D0(1);//低电平点亮
 	while(1)
 	{
-		LED_D0(1);//低电平点亮
 	}
 	
 }

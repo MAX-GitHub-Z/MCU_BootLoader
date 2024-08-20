@@ -989,10 +989,10 @@ static void SetSysClockTo72(void)
   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
   
   /* SYSCLK, HCLK, PCLK2 and PCLK1 configuration ---------------------------*/    
-  /* Enable HSE */    
+  /* 使能 HSE */    
   RCC->CR |= ((uint32_t)RCC_CR_HSEON);
  
-  /* Wait till HSE is ready and if Time out is reached exit */
+  /* 等待 HSE 就绪并作超时处理 */
   do
   {
     HSEStatus = RCC->CR & RCC_CR_HSERDY;
@@ -1007,33 +1007,35 @@ static void SetSysClockTo72(void)
   {
     HSEStatus = (uint32_t)0x00;
   }  
-
+  
+	//如果SHE启动成功，程序继续执行
   if (HSEStatus == (uint32_t)0x01)
   {
-    /* Enable Prefetch Buffer */
+    /* 使能预取址 */
     FLASH->ACR |= FLASH_ACR_PRFTBE;
 
-    /* Flash 2 wait state */
+    /* Flash 2 wait state 对FLASH进行操作，两个等待时间*/
     FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
     FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_2;    
 
  
-    /* HCLK = SYSCLK */
+    /* HCLK = SYSCLK =72M*/
     RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;
       
-    /* PCLK2 = HCLK */
+    /* PCLK2 = HCLK =72M*/
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE2_DIV1;
     
-    /* PCLK1 = HCLK */
+    /* PCLK1 = HCLK =36M*/
     RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE1_DIV2;
 
-#ifdef STM32F10X_CL
+#ifdef STM32F10X_CL//互联性
     /* Configure PLLs ------------------------------------------------------*/
     /* PLL2 configuration: PLL2CLK = (HSE / 5) * 8 = 40 MHz */
     /* PREDIV1 configuration: PREDIV1CLK = PLL2 / 5 = 8 MHz */
         
     RCC->CFGR2 &= (uint32_t)~(RCC_CFGR2_PREDIV2 | RCC_CFGR2_PLL2MUL |
                               RCC_CFGR2_PREDIV1 | RCC_CFGR2_PREDIV1SRC);
+															
     RCC->CFGR2 |= (uint32_t)(RCC_CFGR2_PREDIV2_DIV5 | RCC_CFGR2_PLL2MUL8 |
                              RCC_CFGR2_PREDIV1SRC_PLL2 | RCC_CFGR2_PREDIV1_DIV5);
   
@@ -1050,25 +1052,25 @@ static void SetSysClockTo72(void)
     RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLSRC_PREDIV1 | 
                             RCC_CFGR_PLLMULL9); 
 #else    
-    /*  PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
+    /*  锁相环配置PLL configuration: PLLCLK = HSE * 9 = 72 MHz */
     RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE |
                                         RCC_CFGR_PLLMULL));
     RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSE | RCC_CFGR_PLLMULL9);
 #endif /* STM32F10X_CL */
 
-    /* Enable PLL */
+    /* 使能 PLL */
     RCC->CR |= RCC_CR_PLLON;
 
-    /* Wait till PLL is ready */
+    /* 等待PLL稳定 */
     while((RCC->CR & RCC_CR_PLLRDY) == 0)
     {
     }
     
-    /* Select PLL as system clock source */
-    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+    /* 选择PLLCLK作为系统时钟 */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));//（配置SW）
     RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL;    
 
-    /* Wait till PLL is used as system clock source */
+    /* 等待PLLCLK切换为系统时钟 */
     while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) != (uint32_t)0x08)
     {
     }
@@ -1076,6 +1078,7 @@ static void SetSysClockTo72(void)
   else
   { /* If HSE fails to start-up, the application will have wrong clock 
          configuration. User can add here some code to deal with this error */
+		/*    如果SHE启动失败，用户可以在这里添加处理错误的代码*/
   }
 }
 #endif

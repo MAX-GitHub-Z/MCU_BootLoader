@@ -549,6 +549,11 @@
               <FileType>1</FileType>
               <FilePath>..\User\bsp\bsp_fmc.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_systick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\bsp\bsp_systick.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -8,6 +8,9 @@
 #define _CONFIG_H
 #include "stm32f10x.h"
 
+/*滴答定时器时间配置*/
+#define SYSTICK_TIME 1000
+
 /*APP启动地址*/
 #define APP_STATUP_ADDRESS  0X08004000
 

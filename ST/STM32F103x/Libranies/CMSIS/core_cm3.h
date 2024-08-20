@@ -131,19 +131,19 @@
  */
 typedef struct
 {
-  __IO uint32_t ISER[8];                      /*!< Offset: 0x000  Interrupt Set Enable Register           */
+  __IO uint32_t ISER[8];                      /*!< Offset: 0x000  中断使能寄存器          */
        uint32_t RESERVED0[24];                                   
-  __IO uint32_t ICER[8];                      /*!< Offset: 0x080  Interrupt Clear Enable Register         */
+  __IO uint32_t ICER[8];                      /*!< Offset: 0x080 中断清除寄存器         */
        uint32_t RSERVED1[24];                                    
-  __IO uint32_t ISPR[8];                      /*!< Offset: 0x100  Interrupt Set Pending Register          */
+  __IO uint32_t ISPR[8];                      /*!< Offset: 0x100  中断使能悬起寄存器          */
        uint32_t RESERVED2[24];                                   
-  __IO uint32_t ICPR[8];                      /*!< Offset: 0x180  Interrupt Clear Pending Register        */
+  __IO uint32_t ICPR[8];                      /*!< Offset: 0x180  中断清除悬起寄存器        */
        uint32_t RESERVED3[24];                                   
-  __IO uint32_t IABR[8];                      /*!< Offset: 0x200  Interrupt Active bit Register           */
+  __IO uint32_t IABR[8];                      /*!< Offset: 0x200  中断有效位寄存器           */
        uint32_t RESERVED4[56];                                   
-  __IO uint8_t  IP[240];                      /*!< Offset: 0x300  Interrupt Priority Register (8Bit wide) */
+  __IO uint8_t  IP[240];                      /*!< Offset: 0x300  中断优先级寄存器 (8Bit wide) */
        uint32_t RESERVED5[644];                                  
-  __O  uint32_t STIR;                         /*!< Offset: 0xE00  Software Trigger Interrupt Register     */
+  __O  uint32_t STIR;                         /*!< Offset: 0xE00  软件触发中断寄存器     */
 }  NVIC_Type;                                               
 /*@}*/ /* end of group CMSIS_CM3_NVIC */
 
@@ -364,10 +364,10 @@ typedef struct
  */
 typedef struct
 {
-  __IO uint32_t CTRL;                         /*!< Offset: 0x00  SysTick Control and Status Register */
-  __IO uint32_t LOAD;                         /*!< Offset: 0x04  SysTick Reload Value Register       */
-  __IO uint32_t VAL;                          /*!< Offset: 0x08  SysTick Current Value Register      */
-  __I  uint32_t CALIB;                        /*!< Offset: 0x0C  SysTick Calibration Register        */
+  __IO uint32_t CTRL;                         /*!< Offset: 0x00  SysTick Control and Status Register 控制和状态寄存器*/
+  __IO uint32_t LOAD;                         /*!< Offset: 0x04  SysTick Reload Value Register       重装载数值寄存器*/
+  __IO uint32_t VAL;                          /*!< Offset: 0x08  SysTick Current Value Register      当前数值寄存器*/
+  __I  uint32_t CALIB;                        /*!< Offset: 0x0C  SysTick Calibration Register        矫正寄存器*/
 } SysTick_Type;
 
 /* SysTick Control / Status Register Definitions */
