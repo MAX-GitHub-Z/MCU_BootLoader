@@ -1,4 +1,4 @@
-﻿/**
+/**
   ************************* Copyright ********************** 
   *
   *          (C) Copyright 2024,China.
@@ -26,7 +26,11 @@
 int main(void)
 {
 
-
+	usart_init();
+	while(1)
+	{
+		//printf("hallo ward!");
+	}
 
 
 }

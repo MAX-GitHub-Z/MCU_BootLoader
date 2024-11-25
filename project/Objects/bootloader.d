@@ -1,6 +1,6 @@
 .\objects\bootloader.o: ..\APP\bootLoader.c
 .\objects\bootloader.o: ..\APP\bootLoader.h
-.\objects\bootloader.o: ..\MID\STM32F10x\stm32f10x_fmc.h
+.\objects\bootloader.o: ..\MID\STM32F10x\stm32f10x_mid.h
 .\objects\bootloader.o: ..\CPU_LIB\STM32F10X\CMSIS\stm32f10x.h
 .\objects\bootloader.o: ..\CPU_LIB\STM32F10X\CMSIS\core_cm3.h
 .\objects\bootloader.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -30,3 +30,6 @@
 .\objects\bootloader.o: ..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\objects\bootloader.o: ..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\objects\bootloader.o: ..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\misc.h
+.\objects\bootloader.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\bootloader.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\bootloader.o: E:\keil5\ARM\ARMCC\Bin\..\include\string.h

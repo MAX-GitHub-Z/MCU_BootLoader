@@ -536,9 +536,9 @@
           <GroupName>Mid</GroupName>
           <Files>
             <File>
-              <FileName>stm32f10x_fmc.c</FileName>
+              <FileName>stm32f10x_mid.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MID\STM32F10x\stm32f10x_fmc.c</FilePath>
+              <FilePath>..\MID\STM32F10x\stm32f10x_mid.c</FilePath>
             </File>
           </Files>
         </Group>

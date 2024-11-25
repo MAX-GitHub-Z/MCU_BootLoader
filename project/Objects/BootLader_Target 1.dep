@@ -1,8 +1,8 @@
 Dependencies for Project 'BootLader', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
-F (..\APP\bootLoader.c)(0x67416088)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\APP -I ..\CPU_LIB\STM32F10X\CMSIS -I ..\CPU_LIB\STM32F10X\CMSIS\startup -I ..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc -I ..\MID\STM32F10x -D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\bootloader.o --omf_browse .\objects\bootloader.crf --depend .\objects\bootloader.d)
-I (..\APP\bootLoader.h)(0x67416260)
-I (..\MID\STM32F10x\stm32f10x_fmc.h)(0x6741627C)
+F (..\APP\bootLoader.c)(0x6744871C)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\APP -I ..\CPU_LIB\STM32F10X\CMSIS -I ..\CPU_LIB\STM32F10X\CMSIS\startup -I ..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc -I ..\MID\STM32F10x -D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\bootloader.o --omf_browse .\objects\bootloader.crf --depend .\objects\bootloader.d)
+I (..\APP\bootLoader.h)(0x67416358)
+I (..\MID\STM32F10x\stm32f10x_mid.h)(0x674484FA)
 I (..\CPU_LIB\STM32F10X\CMSIS\stm32f10x.h)(0x559784E0)
 I (..\CPU_LIB\STM32F10X\CMSIS\core_cm3.h)(0x6257E196)
 I (E:\keil5\ARM\ARMCC\include\stdint.h)(0x5CEBCE40)
@@ -31,6 +31,9 @@ I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x559784
 I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x559784E0)
 I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x559784E0)
 I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x559784E0)
+I (E:\keil5\ARM\ARMCC\include\stdarg.h)(0x5CEBCE42)
+I (E:\keil5\ARM\ARMCC\include\stdio.h)(0x5CEBCE41)
+I (E:\keil5\ARM\ARMCC\include\string.h)(0x5CEBCE40)
 F (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\src\misc.c)(0x559784E0)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\APP -I ..\CPU_LIB\STM32F10X\CMSIS -I ..\CPU_LIB\STM32F10X\CMSIS\startup -I ..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc -I ..\MID\STM32F10x -D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
 I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x559784E0)
 I (..\CPU_LIB\STM32F10X\CMSIS\stm32f10x.h)(0x559784E0)
@@ -730,8 +733,8 @@ I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x5597
 I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x559784E0)
 I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x559784E0)
 F (..\CPU_LIB\STM32F10X\CMSIS\startup\startup_stm32f10x_hd.s)(0x559784E0)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-IE:\keil5\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include--pd "__UVISION_VERSION SETA 538" --pd "STM32F10X_MD SETA 1"--list .\listings\startup_stm32f10x_hd.lst --xref -o .\objects\startup_stm32f10x_hd.o --depend .\objects\startup_stm32f10x_hd.d)
-F (..\MID\STM32F10x\stm32f10x_fmc.c)(0x67416274)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\APP -I ..\CPU_LIB\STM32F10X\CMSIS -I ..\CPU_LIB\STM32F10X\CMSIS\startup -I ..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc -I ..\MID\STM32F10x -D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\stm32f10x_fmc.o --omf_browse .\objects\stm32f10x_fmc.crf --depend .\objects\stm32f10x_fmc.d)
-I (..\MID\STM32F10x\stm32f10x_fmc.h)(0x6741627C)
+F (..\MID\STM32F10x\stm32f10x_mid.c)(0x67448C69)(--c99 --gnu -c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\APP -I ..\CPU_LIB\STM32F10X\CMSIS -I ..\CPU_LIB\STM32F10X\CMSIS\startup -I ..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc -I ..\MID\STM32F10x -D__UVISION_VERSION="538" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\stm32f10x_mid.o --omf_browse .\objects\stm32f10x_mid.crf --depend .\objects\stm32f10x_mid.d)
+I (..\MID\STM32F10x\stm32f10x_mid.h)(0x674484FA)
 I (..\CPU_LIB\STM32F10X\CMSIS\stm32f10x.h)(0x559784E0)
 I (..\CPU_LIB\STM32F10X\CMSIS\core_cm3.h)(0x6257E196)
 I (E:\keil5\ARM\ARMCC\include\stdint.h)(0x5CEBCE40)
@@ -760,3 +763,6 @@ I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h)(0x559784
 I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x559784E0)
 I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x559784E0)
 I (..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x559784E0)
+I (E:\keil5\ARM\ARMCC\include\stdarg.h)(0x5CEBCE42)
+I (E:\keil5\ARM\ARMCC\include\stdio.h)(0x5CEBCE41)
+I (E:\keil5\ARM\ARMCC\include\string.h)(0x5CEBCE40)

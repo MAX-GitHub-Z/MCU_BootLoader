@@ -26,5 +26,34 @@
 
 #include "stm32f10x.h"
 
+
+#include <stdarg.h>
+#include <stdio.h>
+#include <string.h>
+
+
+#define  DEBUG_USARTx                   USART1
+#define  DEBUG_USART_BAUDRATE           115200
+    
+#define  DEBUG_USART_TX_GPIO_PORT       GPIOA   
+#define  DEBUG_USART_TX_GPIO_PIN        GPIO_Pin_9
+#define  DEBUG_USART_RX_GPIO_PORT       GPIOA
+#define  DEBUG_USART_RX_GPIO_PIN        GPIO_Pin_10
+
+#define  DEBUG_USART_IRQ                USART1_IRQn
+#define  DEBUG_USART_IRQHandler         USART1_IRQHandler
+
+
+/*************************************
+  * @Name   : usart_init
+  * @brief  :  串口初始化
+  * @param  :  [输入/出] 
+  * @retval ：None
+  * @author : MAX-GitHub-Z 
+  * @Data   : 2024-11-25
+  * <description> :
+ ****************************************/
+void usart_init(void);
+	
 #endif
 

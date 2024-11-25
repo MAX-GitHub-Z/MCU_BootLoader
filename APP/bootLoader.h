@@ -23,7 +23,7 @@
 #ifndef __BOOT_LOADER_H_
 #define __BOOT_LOADER_H_
 
-#include "stm32f10x_fmc.h"
+#include "stm32f10x_mid.h"
 
 #endif
 
