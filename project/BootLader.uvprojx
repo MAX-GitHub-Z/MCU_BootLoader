@@ -341,7 +341,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\APP;..\CPU_LIB\STM32F10X\CMSIS;..\CPU_LIB\STM32F10X\CMSIS\startup;..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc;..\MID\STM32F10x</IncludePath>
+              <IncludePath>..\APP;..\CPU_LIB\STM32F10X\CMSIS;..\CPU_LIB\STM32F10X\CMSIS\startup;..\CPU_LIB\STM32F10X\STM32F10x_StdPeriph_Driver\inc;..\MID\STM32F10x;..\BSP\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -539,6 +539,16 @@
               <FileName>stm32f10x_mid.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MID\STM32F10x\stm32f10x_mid.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\src\bsp_uart.c</FilePath>
             </File>
           </Files>
         </Group>

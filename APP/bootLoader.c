@@ -26,10 +26,12 @@
 int main(void)
 {
 
-	usart_init();
+	mid_init();
+	
+	printf("hallo ward!");
 	while(1)
 	{
-		//printf("hallo ward!");
+		printf("hallo ward!");
 	}
 
 

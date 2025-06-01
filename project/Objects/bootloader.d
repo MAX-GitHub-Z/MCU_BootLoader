@@ -1,6 +1,7 @@
 .\objects\bootloader.o: ..\APP\bootLoader.c
 .\objects\bootloader.o: ..\APP\bootLoader.h
 .\objects\bootloader.o: ..\MID\STM32F10x\stm32f10x_mid.h
+.\objects\bootloader.o: ..\BSP\inc\bsp_uart.h
 .\objects\bootloader.o: ..\CPU_LIB\STM32F10X\CMSIS\stm32f10x.h
 .\objects\bootloader.o: ..\CPU_LIB\STM32F10X\CMSIS\core_cm3.h
 .\objects\bootloader.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h

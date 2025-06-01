@@ -1,5 +1,6 @@
 .\objects\stm32f10x_mid.o: ..\MID\STM32F10x\stm32f10x_mid.c
 .\objects\stm32f10x_mid.o: ..\MID\STM32F10x\stm32f10x_mid.h
+.\objects\stm32f10x_mid.o: ..\BSP\inc\bsp_uart.h
 .\objects\stm32f10x_mid.o: ..\CPU_LIB\STM32F10X\CMSIS\stm32f10x.h
 .\objects\stm32f10x_mid.o: ..\CPU_LIB\STM32F10X\CMSIS\core_cm3.h
 .\objects\stm32f10x_mid.o: E:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
