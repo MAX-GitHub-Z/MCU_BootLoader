@@ -23,8 +23,11 @@
 #ifndef __BOOT_LOADER_H_
 #define __BOOT_LOADER_H_
 
-#include "stm32f10x_mid.h"
+#include "mid_sys.h"
 
+/*C标准库头文件*/
+#include <stdio.h>
+#include <string.h>
 #endif
 
 
